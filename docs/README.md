@@ -20,7 +20,7 @@
 # [About](#about)
 JS loves Py contains two classes. One in JavaScript called `JS()` and the other in Python call `Py()`. These two classes are identical other than the fact that one is written in Python and the other in JavaScript. Both classes allow you to pass an object back and forth between Python and JavaScript easily using Json. Each class creates a Json file which it will store the data being passed in. The Json files created by both classes are called `from_js.json` and `from_py.json` respectively.
 
-Since Json, a JavaScript object and a Python dictionary all have the same syntax this can be leveraged to easily pass objects back and forth between Python and JavaScript (*or really any language that can work with Json*). On top of that you can create listeners to automate getting the data being passed as I have here with the `JS.checkForNote()` and `Py.check_for_note()` methods.
+Since Json, a JavaScript object and a Python dictionary all have the same syntax this can be leveraged to easily pass objects back and forth between Python and JavaScript (*or really any language that can work with Json and/or has a similar object like structure {}*). On top of that you can create listeners to automate getting the data being passed as I have here with the `JS.checkForNote()` and `Py.check_for_note()` methods.
 All you have to do is specify the path to the place where the ***from_js.json*** and ***from_py.json*** files will be created by passing it to whichever listener is being used or both.
 
 > Heres an example of the listeners in both scripts in action. In this example I drag and drop the data files into the directory being listened to for the sake of time.
