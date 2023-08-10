@@ -17,6 +17,10 @@ JS loves Py contains two classes. One in JavaScript called `JS()` and the other 
 Since Json, a JavaScript object and a Python dictionary are all written out the same this can be leveraged to easily pass objects back and forth between Python and JavaScript. On top of that you can create listeners to automate getting the data being passed as I have here with the `JS.checkForNote()` and `Py.check_for_note()` methods.
 All you have to do is specify the path to the place where the ***from_js.json*** and ***from_py.json*** files will be created by passing it to whichever listener is being used or both.
 
+Heres an example of the listeners in both scripts in action. In this example I drag and drop the data files into the directory be watched for the sake of time.
+
+![Example Usage](./pyjsex.gif)
+
 [**Json (JavaScript Object Notation)**](#json)
 ```json
 {
@@ -83,8 +87,6 @@ sendNoteToPy({
 ```
 
 Once the `sendNoteToPy()` method is called the object you passed in will be stored in the ***note_from_js.json*** file at the specified path and this will automatically be picked up on the Python side by the running `Py.check_for_note()` method from step 1. The data will be stored in `Py.NOTE` and accessible from there.
-
-![Example Usage](./pyjsex.gif)
 
 ## [Contributing](#contributing)
 
