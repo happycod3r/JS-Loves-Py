@@ -27,7 +27,7 @@ All you have to do is specify the path to the place where the ***from_js.json***
 
 ![Example Usage](./pyjsex.gif)
 
-These are examples of Json, a JS Object and a Python object to show that they all have the exact same syntax.
+These are examples of Json, a JS Object and a Python dictionary to show that they all have the exact same syntax.
 
 [**Json (JavaScript Object Notation)**](#json)
 ```json
