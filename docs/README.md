@@ -6,6 +6,10 @@
 
 - [Table of Contents](#table-of-contents)
 - [About](#about)
+- [Usage](#usage)
+  - [JS Class Methods](#js-class-methods)
+  - [Py Class Methods](#py-class-methods)
+  - [Examples](#examples)
 - [Contributing](#contributing)
 - [Security](#security)
 - [Contacts](#contacts)
@@ -49,7 +53,7 @@ let note = {
 
 Both the `JS` and the `Py` classes have the exact same functionality and contain the same methods and properties as follows:
 
-### [JS Class Methods](#js)
+### [JS Class Methods](#js-class-methods)
 - `JS.NOTE` - This is where the retieved data from Py is stored
 - `JS.PATH` - This will store the path passed to checkForNote()
 - `JS.sendNoteToPy(note_object, path)`
@@ -57,7 +61,7 @@ Both the `JS` and the `Py` classes have the exact same functionality and contain
 - `JS.checkForNote(path)`
 
 
-### [Py Class Methods](#py)
+### [Py Class Methods](#py-class-methods)
 - `Py.NOTE` - This is where the retieved data from JS is stored
 - `Py.PATH` - This will store the path passed to check_for_note()
 - `Py.send_note_to_js(self, note_object: dict, path: str)`
@@ -65,6 +69,8 @@ Both the `JS` and the `Py` classes have the exact same functionality and contain
 - `Py.check_for_note(self, path: str, file: str)`
 
 ---
+
+## [Examples](#examples)
 
 To get an object from JavaScript to Python do the following:
 
