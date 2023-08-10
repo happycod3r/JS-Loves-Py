@@ -1,6 +1,6 @@
 # JS ❤️ PY
 
-> JS Loves Py is a set of scripts that will allow you to easily pass data back and forth between JavaScript and Python using Json.
+> JS Loves Py is a set of scripts that will allow you to easily pass data back and forth between JavaScript and Python using Json. This demonstrates one way you can couple langauges together to work with one another. The ability to pass data back and forth between two languages like Python and JavaScript opens doors to a universe of new possibilities.
 
 ## [Table Of Contents](#table-of-contents)
 
@@ -20,12 +20,14 @@
 # [About](#about)
 JS loves Py contains two classes. One in JavaScript called `JS()` and the other in Python call `Py()`. These two classes are identical other than the fact that one is written in Python and the other in JavaScript. Both classes allow you to pass an object back and forth between Python and JavaScript easily using Json. Each class creates a Json file which it will store the data being passed in. The Json files created by both classes are called `from_js.json` and `from_py.json` respectively.
 
-Since Json, a JavaScript object and a Python dictionary are all written out the same this can be leveraged to easily pass objects back and forth between Python and JavaScript. On top of that you can create listeners to automate getting the data being passed as I have here with the `JS.checkForNote()` and `Py.check_for_note()` methods.
+Since Json, a JavaScript object and a Python dictionary all have the same syntax this can be leveraged to easily pass objects back and forth between Python and JavaScript (*or really any language that can work with Json*). On top of that you can create listeners to automate getting the data being passed as I have here with the `JS.checkForNote()` and `Py.check_for_note()` methods.
 All you have to do is specify the path to the place where the ***from_js.json*** and ***from_py.json*** files will be created by passing it to whichever listener is being used or both.
 
-> Heres an example of the listeners in both scripts in action. In this example I drag and drop the data files into the directory be watched for the sake of time.
+> Heres an example of the listeners in both scripts in action. In this example I drag and drop the data files into the directory being listened to for the sake of time.
 
 ![Example Usage](./pyjsex.gif)
+
+These are examples of Json, a JS Object and a Python object to show that they all have the exact same syntax.
 
 [**Json (JavaScript Object Notation)**](#json)
 ```json
@@ -96,9 +98,28 @@ sendNoteToPy({
 }, "note_from_js.json")
 ```
 
-Once the `sendNoteToPy()` method is called the object you passed in will be stored in the ***note_from_js.json*** file at the specified path and this will automatically be picked up on the Python side by the running `Py.check_for_note()` method from step 1. The data will be stored in `Py.NOTE` and accessible from there.
+Once the `sendNoteToPy()` method is called the object you passed in will be stored in the ***from_js.json*** file at the specified path and this will automatically be picked up on the Python side by the running `Py.check_for_note()` method from step 1. The data will be stored in the `Py.NOTE` property and accessible from there.
 
 ### [Py ➟ JS](#js2py)
+
+To get an object from **Python** to **JavaScript** do the same thing as in [JS ➟ Py](#js2py) but in reverse as follows:
+
+1) In your JavaScript program create a new instance of the **JS** class and then call the `checkForNote()` method passing in the path to watch and let it run.
+```python
+js = JS()
+js.checkForNote("C:\\MyPyApp\\")
+``` 
+
+2) Now in your Python program create a new instance of the **Py** class and then call the `send_note_to_js()` method passing in the object containing whatever data you want as the first argument.
+```javascript
+py = Py()
+py.send_note_to_js({
+     "title": "Note to JS from Py",
+     "text": "Hello JavaScript!"
+})
+
+Once the `send_note_to_js()` method is called the object you passed in will be stored in the ***from_py.json*** file at the specified path and this will automatically be picked up on the JavaScript side by the running `JS.checkForNote()` method from step 1. The data will be stored in the `js.NOTE` property and accessible from there.
+
 
 ## [Contributing](#contributing)
 
