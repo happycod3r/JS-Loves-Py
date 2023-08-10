@@ -12,10 +12,10 @@
 ---
 
 # [About](#about)
-JS loves Py contains two classes. One in JavaScript called `JS()` and the other in Python call `Py()`. These two classes are identical other than the fact that one is written in Python and the other in JavaScript. Both classes allow you to pass an object back and forth between Python and JavaScript easily using Json. Each class creates a Json file which it will store the data being passed in. The Json files created by both classes are called `note_from_js.json` and `note_from_py.json` respectively.
+JS loves Py contains two classes. One in JavaScript called `JS()` and the other in Python call `Py()`. These two classes are identical other than the fact that one is written in Python and the other in JavaScript. Both classes allow you to pass an object back and forth between Python and JavaScript easily using Json. Each class creates a Json file which it will store the data being passed in. The Json files created by both classes are called `from_js.json` and `from_py.json` respectively.
 
 Since Json, a JavaScript object and a Python dictionary are all written out the same this can be leveraged to easily pass objects back and forth between Python and JavaScript. On top of that you can create listeners to automate getting the data being passed as I have here with the `JS.checkForNote()` and `Py.check_for_note()` methods.
-All you have to do is specify the path to the place where the ***note_from_js.json*** and ***note_from_py.json*** files will be created by passing it to whichever listener is being used or both.
+All you have to do is specify the path to the place where the ***from_js.json*** and ***from_py.json*** files will be created by passing it to whichever listener is being used or both.
 
 [**Json (JavaScript Object Notation)**](#json)
 ```json
@@ -47,6 +47,7 @@ Both the `JS` and the `Py` classes have the exact same functionality and contain
 
 ### [JS Class Methods](#js)
 - `JS.NOTE` - This is where the retieved data from Py is stored
+- `JS.PATH` - This will store the path passed to checkForNote()
 - `JS.sendNoteToPy(note_object, path)`
 - `JS.getNoteFromPy(path)`
 - `JS.checkForNote(path)`
@@ -54,6 +55,7 @@ Both the `JS` and the `Py` classes have the exact same functionality and contain
 
 ### [Py Class Methods](#py)
 - `Py.NOTE` - This is where the retieved data from JS is stored
+- `Py.PATH` - This will store the path passed to check_for_note()
 - `Py.send_note_to_js(self, note_object: dict, path: str)`
 - `Py.get_note_from_js(self, path: str)`
 - `Py.check_for_note(self, path: str, file: str)`
