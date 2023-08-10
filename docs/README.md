@@ -10,6 +10,8 @@
   - [JS Class Methods](#js-class-methods)
   - [Py Class Methods](#py-class-methods)
   - [Examples](#examples)
+    - [JS ➟ Py](#js2py)
+    - [Py ➟ JS](#py2js)
 - [Contributing](#contributing)
 - [Security](#security)
 - [Contacts](#contacts)
@@ -72,7 +74,9 @@ Both the `JS` and the `Py` classes have the exact same functionality and contain
 
 ## [Examples](#examples)
 
-To get an object from JavaScript to Python do the following:
+### [JS ➟ Py](#js2py)
+
+To get an object from **JavaScript** to **Python** do the following:
 
 1) In your Python program create a new instance of the **Py** class and then call the `check_for_note()` method passing in the path to watch and let it run.
 ```python
@@ -93,6 +97,8 @@ sendNoteToPy({
 ```
 
 Once the `sendNoteToPy()` method is called the object you passed in will be stored in the ***note_from_js.json*** file at the specified path and this will automatically be picked up on the Python side by the running `Py.check_for_note()` method from step 1. The data will be stored in `Py.NOTE` and accessible from there.
+
+### [Py ➟ JS](#js2py)
 
 ## [Contributing](#contributing)
 
