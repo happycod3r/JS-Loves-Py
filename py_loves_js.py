@@ -56,11 +56,11 @@ class Py:
 
 py = Py()
 
-if py.check_for_note("."):
-    print("Data available!")
-    print(py.NOTE)
+# if py.check_for_note("."):
+#     print("Data available!")
+#     print(py.NOTE)
 
-# py.send_note_to_js({
-#     "name": "python",
-#     "text": "Hello JavaScript!"
-# }, "note_from_py.json")
+py.send_note_to_js({
+    "name": "python",
+    "text": "Hello JavaScript!"
+}, "note_from_py.json")
