@@ -5,6 +5,7 @@ class JS {
     constructor() {
 
         this.NOTE = null
+        this.JSON_PATH = null
 
         this.sendNoteToPy = (note_object, path) => {
             try {
@@ -15,9 +16,9 @@ class JS {
             }
         }
 
-        this.getNoteFromPy = (path) => {
+        this.getNoteFromPy = () => {
             try {
-                let note_from_py = JSON.parse(fs.readFileSync(path))
+                let note_from_py = JSON.parse(fs.readFileSync(this.JSON_PATH))
                 return note_from_py
             }
             catch(err) {
@@ -29,11 +30,12 @@ class JS {
             if (path) {
                 try {
                     let got_note = false
-                    const note_path = path
+                    const note_path = path + '/' + "note_from_py.json"
+                    this.JSON_PATH = note_path
         
                     while (!got_note) {
                         if (fs.existsSync(note_path)) {
-                            let note = this.getNoteFromPy(note_path)
+                            let note = this.getNoteFromPy()
                             this.NOTE = note
                             got_note = true;
                         } else {
@@ -50,15 +52,16 @@ class JS {
     }
 };
 
+//Example usage
+
 const js = new JS()
-if (js.checkForNote("note_from_py.json")) {
-    console.log("Got the note from Python!!!")
+if (js.checkForNote(".")) {
+    console.log("Data available!!!")
+    console.log(js.NOTE)
 }
 
-// Example usage
-// sendNoteToPy({
+// js.sendNoteToPy({
 //     "name": "javascript",
 //     "text": "Hello Python!"
 // }, "note_from_js.json")
 
-//console.info(getNoteFromPy())
