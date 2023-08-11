@@ -2,6 +2,10 @@ import json
 import os
 
 class Py:
+    """
+    Creates a Json file with the given dictionar to be picked up 
+    by the JavaScript JS object. 
+    """
     def __init__(self) -> None:
         self.NOTE = None
         self.JSON_PATH = None
@@ -56,11 +60,15 @@ class Py:
 
 py = Py()
 
+# Listen for and get an object from JS. 
+
 # if py.check_for_note("."):
 #     print("Data available!")
 #     print(py.NOTE)
 
-py.send_note_to_js({
-    "name": "python",
-    "text": "Hello JavaScript!"
-}, "note_from_py.json")
+# Send an object to JS.
+
+# py.send_note_to_js({
+#     "name": "python",
+#     "text": "Hello JavaScript!"
+# }, "note_from_py.json")

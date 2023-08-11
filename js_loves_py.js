@@ -2,6 +2,10 @@ const fs = require('fs')
 const path = require('path')
 
 class JS {
+    /**
+     * Creates a Json file with the given object to be picked up 
+     * by the Python Py object. 
+     */
     constructor() {
 
         this.NOTE = null
@@ -54,11 +58,15 @@ class JS {
 
 //Example usage
 
-const js = new JS()
-if (js.checkForNote(".")) {
-    console.log("Data available!!!")
-    console.log(js.NOTE)
-}
+// Listen for and get an object from JS. 
+
+// const js = new JS()
+// if (js.checkForNote(".")) {
+//     console.log("Data available!!!")
+//     console.log(js.NOTE)
+// }
+
+// Send an object to JS.
 
 // js.sendNoteToPy({
 //     "name": "javascript",

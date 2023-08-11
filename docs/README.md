@@ -1,5 +1,7 @@
 # JS ❤️ PY
 
+## JavaScript and Python Coupling
+
 > JS Loves Py is a set of scripts that will allow you to easily pass data back and forth between JavaScript and Python using Json. This demonstrates one way you can couple langauges together to work with one another. The ability to pass data back and forth between two languages like Python and JavaScript opens doors to a universe of new possibilities.
 
 ## [Table Of Contents](#table-of-contents)
@@ -59,7 +61,7 @@ Both the `JS` and the `Py` classes have the exact same functionality and contain
 
 ### [JS Class Methods](#js-class-methods)
 - `JS.NOTE` - This is where the retieved data from Py is stored
-- `JS.PATH` - This will store the path passed to checkForNote()
+- `JS.JSON_PATH` - This will store the path passed to checkForNote()
 - `JS.sendNoteToPy(note_object, path)`
 - `JS.getNoteFromPy(path)`
 - `JS.checkForNote(path)`
@@ -67,7 +69,7 @@ Both the `JS` and the `Py` classes have the exact same functionality and contain
 
 ### [Py Class Methods](#py-class-methods)
 - `Py.NOTE` - This is where the retieved data from JS is stored
-- `Py.PATH` - This will store the path passed to check_for_note()
+- `Py.JSON_PATH` - This will store the path passed to check_for_note()
 - `Py.send_note_to_js(self, note_object: dict, path: str)`
 - `Py.get_note_from_js(self, path: str)`
 - `Py.check_for_note(self, path: str, file: str)`
@@ -117,6 +119,7 @@ py.send_note_to_js({
      "title": "Note to JS from Py",
      "text": "Hello JavaScript!"
 })
+```
 
 Once the `send_note_to_js()` method is called the object you passed in will be stored in the ***from_py.json*** file at the specified path and this will automatically be picked up on the JavaScript side by the running `JS.checkForNote()` method from step 1. The data will be stored in the `js.NOTE` property and accessible from there.
 
