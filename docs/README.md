@@ -23,11 +23,11 @@ JS loves Py contains two classes. One in JavaScript called `JS()` and the other 
 Since Json, a JavaScript object and a Python dictionary all have the same syntax this can be leveraged to easily pass objects back and forth between Python and JavaScript (*or really any language that can work with Json and/or has a similar object like structure {}*). On top of that you can create listeners to automate getting the data being passed as I have here with the `JS.checkForNote()` and `Py.check_for_note()` methods.
 All you have to do is specify the path to the place where the ***from_js.json*** and ***from_py.json*** files will be created by passing it to whichever listener is being used or both.
 
-> Heres an example of the listeners in both scripts in action. In this example I drag and drop the data files into the directory being listened to for the sake of time.
+> Heres an example of the listeners in both scripts in action. In this example I drag and drop the data files into the directory being listened to for the sake of time. You can see though that as I drop each file into the folder the output displays the contents.
 
 ![Example Usage](./pyjsex.gif)
 
-These are examples of Json, a JS Object and a Python dictionary to show that they all have the exact same syntax.
+In case you aren't familiar these are examples of Json, a JS Object and a Python dictionary to show that they all have the exact same syntax.
 
 [**Json (JavaScript Object Notation)**](#json)
 ```json
