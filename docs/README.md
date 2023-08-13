@@ -2,10 +2,6 @@
 
 ## JavaScript and Python Coupling
 
-{% note %}
-**Note:** This is some text in a note.
-{% endnote %}
-
 > JS Loves Py is a set of scripts that will allow you to easily pass data back and forth between JavaScript and Python using Json. I created this project to highlight this ability. It demonstrates one of many ways you can couple langauges together to work with one another. The ability to pass data back and forth between two languages like Python and JavaScript opens doors to a universe of new possibilities.
 
 ## [Table Of Contents](#table-of-contents)
