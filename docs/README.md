@@ -14,7 +14,7 @@
   - [Examples](#examples)
     - [JS ➟ Py](#js2py)
     - [Py ➟ JS](#py2js)
-- [Use Cases](#use-cases)
+- [Python & JavaScript Use Cases](#use-cases)
   - [Web Development](#web-development)
   - [Data Visualization](#data-visualization)
   - [Full-Stack Applications](#full-stack-applications)
@@ -72,7 +72,7 @@ let note = {
 
 Both the `JS` and the `Py` classes have the exact same functionality and contain the same methods and properties as follows:
 
-### [JS Class Methods](#js-class-methods)
+### [JS Class Attributes](#js-class-methods)
 - `JS.NOTE` - This is where the retieved data from Py is stored
 - `JS.JSON_PATH` - This will store the path passed to checkForNote()
 - `JS.sendNoteToPy(note_object, path)`
@@ -80,7 +80,7 @@ Both the `JS` and the `Py` classes have the exact same functionality and contain
 - `JS.checkForNote(path)`
 
 
-### [Py Class Methods](#py-class-methods)
+### [Py Class Attributes](#py-class-methods)
 - `Py.NOTE` - This is where the retieved data from JS is stored
 - `Py.JSON_PATH` - This will store the path passed to check_for_note()
 - `Py.send_note_to_js(self, note_object: dict, path: str)`
@@ -136,7 +136,7 @@ py.send_note_to_js({
 
 Once the `send_note_to_js()` method is called the object you passed in will be stored in the ***from_py.json*** file at the specified path and this will automatically be picked up on the JavaScript side by the running `JS.checkForNote()` method from step 1. The data will be stored in the `js.NOTE` property and accessible from there.
 
-## [Use Cases](#use-cases)
+## [Python & JavaScript Use Cases](#use-cases)
 Using Python and JavaScript together can be pretty powerful and flexible, as each language has its own strengths and use cases. Below are some common scenarios where combining Python and JavaScript can provide benefits:
 
 ### [Web Development:](#web-development)
